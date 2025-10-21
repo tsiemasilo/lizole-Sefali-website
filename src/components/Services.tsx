@@ -62,7 +62,7 @@ const Services = () => {
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-6xl font-bold">
             Everything You Need to{" "}
-            <span className="text-primary">Dominate</span>
+            <span className="text-primary animate-glow">Dominate</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive paid advertising solutions designed specifically for e-commerce stores

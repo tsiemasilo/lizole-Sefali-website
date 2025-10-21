@@ -50,7 +50,7 @@ const EcommerceFocus = () => {
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-              Built for <span className="text-primary">Online Stores</span>
+              Built for <span className="text-primary animate-glow">Online Stores</span>
             </h2>
             
             <p className="text-xl text-muted-foreground">
