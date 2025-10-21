@@ -8,10 +8,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-bold text-xl">
-                LS
-              </div>
-              <span className="text-xl font-bold">[LS]</span>
+              <span className="text-2xl font-bold">[LS]</span>
             </div>
             <p className="text-muted-foreground text-sm">
               Data-driven Meta campaigns that drive real results for e-commerce stores.

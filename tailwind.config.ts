@@ -127,6 +127,17 @@ export default {
           "50%": {
             boxShadow: "0 0 40px hsl(0 84% 55% / 0.6)"
           }
+        },
+        "gradient-shift": {
+          "0%": {
+            backgroundPosition: "0% 50%"
+          },
+          "50%": {
+            backgroundPosition: "100% 50%"
+          },
+          "100%": {
+            backgroundPosition: "0% 50%"
+          }
         }
       },
       animation: {
@@ -137,6 +148,7 @@ export default {
         "fade-in-right": "fade-in-right 0.6s ease-out forwards",
         "scale-in": "scale-in 0.5s ease-out forwards",
         "glow": "glow 2s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 15s ease infinite",
       },
     },
   },

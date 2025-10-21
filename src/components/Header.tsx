@@ -25,10 +25,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-bold text-xl">
-              LS
-            </div>
-            <span className="text-xl font-bold hidden sm:block">[LS]</span>
+            <span className="text-2xl font-bold">[LS]</span>
           </div>
 
           {/* Navigation */}
