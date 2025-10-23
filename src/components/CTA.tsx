@@ -17,7 +17,7 @@ const CTA = () => {
       <div className="container px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-6xl font-bold leading-tight animate-fade-in">
-            Ready to Scale Your{" "}
+            Ready to Scale Your<br />
             <span className="text-primary animate-glow">
 E-Commerce Store?</span>
           </h2>
