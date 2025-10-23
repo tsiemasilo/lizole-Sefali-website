@@ -18,7 +18,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="LS-SCALES Logo" 
-              className="h-12 w-auto mix-blend-lighten opacity-95 hover:opacity-100 transition-opacity duration-300"
+              className="h-20 w-auto mix-blend-lighten opacity-95 hover:opacity-100 transition-opacity duration-300"
             />
           </div>
 
