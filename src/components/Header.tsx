@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -14,7 +15,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold">[LSM] - SCALES</span>
+            <img 
+              src={logo} 
+              alt="LS-SCALES Logo" 
+              className="h-12 w-auto mix-blend-lighten opacity-95 hover:opacity-100 transition-opacity duration-300"
+            />
           </div>
 
           {/* Navigation */}
