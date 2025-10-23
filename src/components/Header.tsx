@@ -10,15 +10,15 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-lg border-b border-border shadow-lg" : "bg-transparent"}`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-black/95 backdrop-blur-lg border-b border-white/10 shadow-lg" : "bg-black/80"}`}>
       <div className="container px-4 md:px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-28">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <img 
               src={logo} 
               alt="LS-SCALES Logo" 
-              className="h-20 w-auto mix-blend-lighten opacity-95 hover:opacity-100 transition-opacity duration-300"
+              className="h-36 w-auto mix-blend-lighten opacity-95 hover:opacity-100 transition-opacity duration-300"
             />
           </div>
 
