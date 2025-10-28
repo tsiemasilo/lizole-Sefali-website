@@ -57,7 +57,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gradient-to-b from-background to-secondary/30">
+    <section id="services" ref={sectionRef} className="py-24 bg-gradient-to-b from-background to-secondary/30 scroll-mt-28">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-6xl font-bold">

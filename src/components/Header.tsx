@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
+
+const smoothScroll = (targetId: string) => {
+  const element = document.getElementById(targetId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -24,42 +31,63 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a 
-              href="#services" 
-              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium group"
+            <button 
+              onClick={() => smoothScroll('services')}
+              className="relative text-foreground/80 hover:text-primary transition-all duration-500 font-medium group cursor-pointer bg-transparent border-0"
             >
-              Services
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-            </a>
-            <a 
-              href="#about" 
-              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium group"
+              <span className="relative z-10 group-hover:scale-110 inline-block transition-transform duration-300">
+                Services
+              </span>
+              {/* Animated underline */}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary via-red-400 to-primary transition-all duration-500 group-hover:w-full" />
+              {/* Glow effect */}
+              <span className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 bg-primary/5 blur-xl transition-all duration-500" />
+            </button>
+            
+            <button 
+              onClick={() => smoothScroll('about')}
+              className="relative text-foreground/80 hover:text-primary transition-all duration-500 font-medium group cursor-pointer bg-transparent border-0"
             >
-              About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-            </a>
-            <a 
-              href="#case-studies" 
-              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium group"
+              <span className="relative z-10 group-hover:scale-110 inline-block transition-transform duration-300">
+                About
+              </span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary via-red-400 to-primary transition-all duration-500 group-hover:w-full" />
+              <span className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 bg-primary/5 blur-xl transition-all duration-500" />
+            </button>
+            
+            <button 
+              onClick={() => smoothScroll('case-studies')}
+              className="relative text-foreground/80 hover:text-primary transition-all duration-500 font-medium group cursor-pointer bg-transparent border-0"
             >
-              Case Studies
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-            </a>
-            <a 
-              href="#contact" 
-              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium group"
+              <span className="relative z-10 group-hover:scale-110 inline-block transition-transform duration-300">
+                Case Studies
+              </span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary via-red-400 to-primary transition-all duration-500 group-hover:w-full" />
+              <span className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 bg-primary/5 blur-xl transition-all duration-500" />
+            </button>
+            
+            <button 
+              onClick={() => smoothScroll('contact')}
+              className="relative text-foreground/80 hover:text-primary transition-all duration-500 font-medium group cursor-pointer bg-transparent border-0"
             >
-              Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-            </a>
+              <span className="relative z-10 group-hover:scale-110 inline-block transition-transform duration-300">
+                Contact
+              </span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary via-red-400 to-primary transition-all duration-500 group-hover:w-full" />
+              <span className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 bg-primary/5 blur-xl transition-all duration-500" />
+            </button>
           </nav>
 
           {/* CTA Button */}
           <Button 
             variant="default" 
-            className="hidden sm:inline-flex transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_hsl(0_84%_55%/0.5)] active:scale-95"
+            className="hidden sm:inline-flex relative overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-[0_0_40px_hsl(0_84%_55%/0.8)] active:scale-95 group"
           >
-            Get Started
+            <span className="relative z-10">Get Started</span>
+            {/* Animated gradient background */}
+            <span className="absolute inset-0 bg-gradient-to-r from-primary via-red-600 to-primary bg-[length:200%_100%] animate-gradient-shift opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            {/* Pulse rings */}
+            <span className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 group-hover:animate-ping bg-primary/30" />
           </Button>
 
           {/* Mobile menu button */}

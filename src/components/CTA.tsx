@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 const CTA = () => {
-  return <section className="py-24 relative overflow-hidden">
+  return <section id="contact" className="py-24 relative overflow-hidden scroll-mt-28">
+      <div id="case-studies" className="absolute top-0" />
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background" />
       
