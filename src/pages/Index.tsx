@@ -18,7 +18,7 @@ const Index = () => {
       />
       
       <Header />
-      <main>
+      <main className="pt-28">
         <Hero />
         <Services />
         <EcommerceFocus />
