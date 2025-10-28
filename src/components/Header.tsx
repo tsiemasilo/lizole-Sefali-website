@@ -14,11 +14,11 @@ const Header = () => {
       <div className="container px-4 md:px-6">
         <div className="flex items-center justify-between h-28">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 h-24 overflow-hidden">
             <img 
               src={logo} 
               alt="LS-SCALES Logo" 
-              className="h-36 w-auto mix-blend-lighten opacity-95 hover:opacity-100 transition-opacity duration-300"
+              className="h-36 w-auto mix-blend-lighten opacity-95 hover:opacity-100 transition-opacity duration-300 object-cover object-top"
             />
           </div>
 
