@@ -14,7 +14,7 @@ const Header = () => {
       <div className="container px-4 md:px-6">
         <div className="flex items-center justify-between h-28">
           {/* Logo */}
-          <div className="flex items-center gap-2 h-24 overflow-hidden">
+          <div className="flex items-center gap-2 h-20 overflow-hidden">
             <img 
               src={logo} 
               alt="LS-SCALES Logo" 
