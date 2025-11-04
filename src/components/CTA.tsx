@@ -1,5 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+
+const smoothScroll = (targetId: string) => {
+  const element = document.getElementById(targetId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const CTA = () => {
   return <section id="contact" className="py-24 relative overflow-hidden scroll-mt-28">
       <div id="case-studies" className="absolute top-0" />
@@ -33,11 +41,11 @@ E-Commerce Store?</span>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{
           animationDelay: '400ms'
         }}>
-            <Button variant="hero" size="xl" className="group">
+            <Button variant="hero" size="xl" className="group" onClick={() => smoothScroll('contact')}>
               Schedule a Strategy Call
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="xl" className="border-primary/30 hover:border-primary hover:bg-primary/10">
+            <Button variant="outline" size="xl" className="border-primary/30 hover:border-primary hover:bg-primary/10" onClick={() => smoothScroll('case-studies')}>
               View Our Work
             </Button>
           </div>
