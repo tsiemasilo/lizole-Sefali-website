@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Target, TrendingUp, Users, Zap } from "lucide-react";
+import { Target, TrendingUp, Users, Zap, Mail, Video } from "lucide-react";
 
 const services = [
   {
@@ -25,6 +25,18 @@ const services = [
     title: "Conversion Acceleration",
     description: "From scroll to sold in seconds. We engineer every touchpoint to eliminate friction and maximize customer lifetime value.",
     animation: "group-hover:rotate-[-12deg] group-hover:scale-110"
+  },
+  {
+    icon: Mail,
+    title: "Email Marketing",
+    description: "Strategic email campaigns that nurture relationships and drive repeat purchases. Turn one-time buyers into lifetime customers with data-backed automation.",
+    animation: "group-hover:translate-x-2 group-hover:scale-110"
+  },
+  {
+    icon: Video,
+    title: "TikTok Ads",
+    description: "Viral-ready campaigns that capture Gen Z and millennial attention. We create scroll-stopping content that converts views into sales on the fastest-growing platform.",
+    animation: "group-hover:rotate-6 group-hover:scale-110"
   },
 ];
 
@@ -69,7 +81,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isVisible = visibleCards.includes(index);
